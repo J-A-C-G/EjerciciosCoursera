@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Main Layout</string>
+    <string name="name_boton">Saludo</string>
+    <string name="mensaje">Hola =)</string>
+    <string name="texto_accion">Sigue Adelante</string>
+    <string-array name="planeta">
+        <item>Mercurio</item>
+        <item>Jupiter</item>
+        <item>Venus</item>
+        <item>Marte</item>
+        <item>Tierra</item>
+        <item>Saturno</item>
+        <item>Neptuno</item>
+    </string-array>
+</resources>
