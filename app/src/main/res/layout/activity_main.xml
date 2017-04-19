@@ -3,6 +3,7 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="coursera.ejercicios.com.ejercicioscoursera.MainActivity">
@@ -16,12 +17,14 @@
         <android.support.v4.widget.SwipeRefreshLayout
             android:id="@+id/refresh"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/lista_height">
 
             <ListView
                 android:id="@+id/lvRefresh"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="@dimen/lista_height"
+                android:scrollIndicators="right"
+                android:scrollbarSize="5dp">
 
             </ListView>
 
@@ -31,7 +34,7 @@
             android:id="@+id/tvSaludo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:layout_below="@+id/refresh"
             android:text="Hello World!"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -56,6 +59,47 @@
 
             android:layout_below="@+id/btnSaludo"
             android:src="@mipmap/ic_launcher" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp"
+            android:layout_below="@+id/fab"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:id="@+id/rImagen"
+                android:layout_width="200dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imagen"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/spider" />
+
+                <TextView
+                    android:id="@+id/titulotarjeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imagen"
+                    android:text="@string/tituloTarjeta"
+                    android:textColor="@color/cardview_dark_background" />
+
+                <TextView
+                    android:id="@+id/textotarjeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titulotarjeta"
+                    android:text="@string/textoTarjeta" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
 
     </RelativeLayout>
 

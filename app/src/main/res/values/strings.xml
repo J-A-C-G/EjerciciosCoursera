@@ -12,4 +12,6 @@
         <item>Saturno</item>
         <item>Neptuno</item>
     </string-array>
+    <string name="tituloTarjeta">SpiderMan</string>
+    <string name="textoTarjeta">El hombre arana en su version man oscura y con una fuerza horrorifica</string>
 </resources>
